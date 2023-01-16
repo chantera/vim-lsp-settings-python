@@ -39,7 +39,7 @@ function! s:install(cmd) abort
 
   let l:packages = ['pylsp-mypy', 'python-lsp-isort', 'python-lsp-black']
 
-  if confirm(printf('Add %s to pylsp-all?', join(l:packages, ', ')), "&Yes\n&Cancel") !=# 1
+  if confirm(printf('Add %s to %s?', join(l:packages, ', '), a:cmd), "&Yes\n&Cancel") !=# 1
     return
   endif
 
